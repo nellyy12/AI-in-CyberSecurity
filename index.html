@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Restaurant App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Restaurant!</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservations">Reservations</a></li>
+                <li><a href="#order-taking">Order Taking (Staff)</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="menu" class="app-section">
+            <h2>Our Delicious Menu</h2>
+            <div id="menu-items">
+                <p>Loading menu...</p>
+            </div>
+        </section>
+
+        <section id="reservations" class="app-section">
+            <h2>Make a Reservation</h2>
+            <form id="reservation-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" required>
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" min="1" value="2" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+
+                <button type="submit">Book Now</button>
+                <p id="reservation-message"></p>
+            </form>
+        </section>
+
+        <section id="order-taking" class="app-section">
+            <h2>Order Taking (Staff Only)</h2>
+            <p>This is a simplified internal tool for staff to log orders.</p>
+            <form id="staff-order-form">
+                <label for="table-number">Table Number:</label>
+                <input type="number" id="table-number" min="1" required>
+
+                <label for="order-items">Order Items (e.g., "Pizza, Coke, Salad"):</label>
+                <textarea id="order-items" rows="4" required></textarea>
+
+                <button type="submit">Submit Order</button>
+                <p id="order-message"></p>
+            </form>
+        </section>
+
+        <section id="contact" class="app-section">
+            <h2>Contact Us</h2>
+            <p>
+                **Address:** 123 Restaurant Street, City, Country<br>
+                **Phone:** +123 456 7890<br>
+                **Email:** info@yourrestaurant.com<br>
+                **Hours:** Mon-Sun: 10:00 AM - 10:00 PM
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Restaurant. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
